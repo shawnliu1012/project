@@ -1,5 +1,6 @@
 const form = document.getElementById('form');
 const username = document.getElementById('username');
+const email = document.getElementById('email');
 const password = document.getElementById('password');
 const password2 = document.getElementById('password2');
 
@@ -14,7 +15,7 @@ function showError(input, message) {
     const formControl = input.parentElement;
     formControl.className = 'form-control success';
   }
-//只能輸入英數的還不知道怎麼改
+// //使用jQuery
 //   function ValidateCNWord(e, value) {
 // 	if (/[\W]/g.test(value)) {
 // 		value = value.replace(/[\W]/g, '')
@@ -22,21 +23,29 @@ function showError(input, message) {
 // 	}
 // 	return false;
 // }
-$("#form").submit(function(event){
-    event.preventDefault();
-    var email_input = $("#email").val();
-    result = checkEmail(email_input);
-    var message = $ ("#email").siblings('small').first();
-    if(result){
-        message.css('visibility','hidden')
-    }else{
-        message.text("email is not vaild").css('visibility','visible')
-    }
-});
+// $("#form").submit(function(event){
+//     event.preventDefault();
+//     var email_input = $("#email").val();
+//     result = checkEmail(email_input);
+//     var message = $ ("#email").siblings('small').first();
+//     if(result){
+//         message.css('visibility','hidden')
+//     }else{
+//         message.text("email is not vaild").css('visibility','visible')
+//     }
+// });
 
-function checkEmail(email){
-    var emailRule = /^\w+((-\w+)|(\.\w+))*\@[A-Za-z0-9]+((\.|-)[A-Za-z0-9]+)*\.[A-Za-z]+$/;
-    return emailRule.test(email)
+// function checkEmail(email){
+//     var emailRule = /^\w+((-\w+)|(\.\w+))*\@[A-Za-z0-9]+((\.|-)[A-Za-z0-9]+)*\.[A-Za-z]+$/;
+//     return emailRule.test(email)
+// }
+function checkEmail(input) {
+  const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  if (re.test(input.value.trim())) {
+    showSuccess(input);
+  } else {
+    showError(input, 'Email is not valid');
+  }
 }
 
 function checkRequired(inputArr) {
