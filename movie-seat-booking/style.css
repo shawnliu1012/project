@@ -40,6 +40,13 @@ body {
     -webkit-appearance: none;
     appearance: none;
 }
+
+.container {
+    /* 三維變化 3D效果變化，但為何座位圖不變?待了解 */
+    perspective: 1000px;
+    margin-bottom: 30px;
+}
+
 /* 原來的.seat並無文字撐開，所以無寬度高度，使用heigh所以無寬度高度，使用height、width、margin設定 */
 .seat {
     background: #444451;
@@ -67,8 +74,62 @@ body {
 .seat:nth-last-of-type(2){
     margin-left: 18px;
 }
+/*hover選擇器: http://www.w3big.com/zh-TW/css/sel-hover.html */
+.seat:not(.occupied):hover {
+    /* 更改圖標 */
+    cursor: pointer;
+    /* 座位圖形做放大 */
+    transform: scale(1.2);
+}
+/* 不讓上面設定的變化在shwcase版發生 */
+.showcase .seat:not(.occupied):hover {
+    cursor: default;
+    transform: scale(1);
+}
+
+.showcase {
+    background: rgba(0, 0, 0, 0.1);
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: #777;
+    /* 文字前的標記(這裡是將它去除標記) */
+    list-style-type: none;
+    display: flex;
+    /* https://developer.mozilla.org/zh-CN/docs/Web/CSS/justify-content */
+    justify-content: space-between;
+}
+
+.showcase li{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 10px;
+}
+/* showcase 圖案與字之間的間隔(以字的左側去調整) */
+.showcase li small {
+    margin-left: 2px;
+}
 
 .row {
     /* https://magicjackting.pixnet.net/blog/post/224485899 */
     display: flex;
+}
+
+.screen {
+    background: #fff;
+    height: 70px;
+    width: 100%;
+    margin: 15px 0;
+    /* https://developer.mozilla.org/zh-CN/docs/Web/CSS/transform-function/rotateX() */
+    transform: rotateX(-45deg);
+    /* https://www.wibibi.com/info.php?tid=267 */
+    box-shadow: 0 3px 10px rgba(255, 255, 255, 0.7);
+}
+
+p.text {
+    margin: 5px 0;
+}
+
+p.text  span{
+    color: #6feaf6;
 }
