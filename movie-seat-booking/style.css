@@ -21,5 +21,54 @@ body {
 }
 
 .movie-container select {
+    /* 背景 */
+    background: #fff;
+    /* https://www.itread01.com/hkpypll.html */
+    border: 0;
+    /* 圓角 */
+    border-radius: 5px;
+    /* 字體 */
+    font-size: 14px;
+    /* 距離左側間隔 */
+    margin-left: 10px;
+    /* 格子的長寬 */
+    padding: 5px 15px 5px 15px;
+    /* https://developer.mozilla.org/zh-CN/docs/Web/CSS/appearance */
+    /* https://www.itread01.com/p/691277.html */
+    /* https://blog.wrinkle-design.com/article/date/2020/09/ */
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+}
+/* 原來的.seat並無文字撐開，所以無寬度高度，使用heigh所以無寬度高度，使用height、width、margin設定 */
+.seat {
+    background: #444451;
+    height: 12px;
+    width: 15px;
+    margin: 3px;
+    /* 左右各圓角 */
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
 
+.seat.selected {
+    background-color: #6feaf6;
+}
+
+.seat.occupied {
+    background-color: #fff;
+}
+/* nth-​​of-type（）選擇器 ，這目的是讓其中一行座位產生間距*/
+/* https://ithelp.ithome.com.tw/articles/10227242 */
+.seat:nth-of-type(2){
+    margin-right: 18px;
+}
+
+.seat:nth-last-of-type(2){
+    margin-left: 18px;
+}
+
+.row {
+    /* https://magicjackting.pixnet.net/blog/post/224485899 */
+    display: flex;
 }
