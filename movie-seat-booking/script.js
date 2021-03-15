@@ -8,9 +8,26 @@ const movieSelect = document.getElementById('movie');
 //這裡從const改成let，因事件監聽換票價時發生錯誤，why?
 let ticketPrice = +movieSelect.value;
 
+// Save selected movie index and price
+function setMovieData(movieIndex, moviePrice) {
+    localStorage.setItem('selectedMovieIndex', movieIndex);
+    localStorage.setItem('selectedMoviePrice', moviePrice);
+}
+
 //Update total and count
 function updateSelectedCount() {
     const selectedSeats = document.querySelectorAll('.row .seat.selected');
+    
+    // 此函式簡化 const seatsIndex = [...selectedSeats].map(function(seat) { return [...seats].indexOf(seat)});
+    // arrat.map():https://ithelp.ithome.com.tw/articles/10215281
+    const seatsIndex = [...selectedSeats].map(seat => [...seats].indexOf(seat));
+
+    // localStorage: https://medium.com/%E9%BA%A5%E5%85%8B%E7%9A%84%E5%8D%8A%E8%B7%AF%E5%87%BA%E5%AE%B6%E7%AD%86%E8%A8%98/javascript-localstorage-%E7%9A%84%E4%BD%BF%E7%94%A8-e0da6f402453
+    // https://ithelp.ithome.com.tw/articles/10195522
+    // https://developer.mozilla.org/zh-CN/docs/Web/API/Storage/setItem
+    // JSON.stringify: https://www.w3school.com.cn/js/js_json_stringify.asp
+    localStorage.setItem('selectedSeats', JSON.stringify(seatsIndex));
+    
     const selectedSeatsCount = selectedSeats.length;
 
     count.innerText = selectedSeatsCount;
@@ -21,6 +38,8 @@ function updateSelectedCount() {
 //這裡在撰寫code時犯了錯誤，將value的v寫成大寫導致票價無法計算，筆記需記錄一下
 movieSelect.addEventListener('change', e => {
     ticketPrice = +e.target.value;
+    // 此處在code上方創建函式
+    setMovieData(e.target.selectedIndex, e.target.value);
     updateSelectedCount();
 });
 
