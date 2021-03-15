@@ -4,6 +4,9 @@ const count = document.getElementById('count');
 const total = document.getElementById('total');
 const movieSelect = document.getElementById('movie');
 
+// 再理解一下
+populateUI();
+
 // 小撇步:加了+號可將回傳值由字串轉換為數字
 //這裡從const改成let，因事件監聽換票價時發生錯誤，why?
 let ticketPrice = +movieSelect.value;
@@ -34,6 +37,26 @@ function updateSelectedCount() {
     total.innerText = selectedSeatsCount * ticketPrice;
 }
 
+// Get datd from localstorage and populate UI
+function populateUI() {
+    const selectedSeats = JSON.parse(localStorage.getItem('selectedSeats')
+    );
+   if (selectedSeats !== null && selectedSeats.length > 0) {
+    // seat = 上方的 const seats = document.querySelectorAll('.row .seat:not(.occupied)');
+        seat.forEach((seat, index) => {
+            if (selectedSeats.indexOf(index) > -1) {
+                seat.classList.add('selected');
+            }
+        });
+   }
+
+   const selectedMovieIndex = localStorage.getItem('selectedMovieIndex');
+
+   if (selectedMovieIndex !== null) {
+       movieSelect.selectedIndex = selectedMovieIndex;
+   }
+}
+
 //Movie select event
 //這裡在撰寫code時犯了錯誤，將value的v寫成大寫導致票價無法計算，筆記需記錄一下
 movieSelect.addEventListener('change', e => {
@@ -55,3 +78,7 @@ container.addEventListener('click', e => {
     updateSelectedCount();
     }
 });
+
+// Initial count and total set
+// 再理解一下這
+updateSelectedCount();
