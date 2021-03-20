@@ -65,5 +65,32 @@ p {
 
 .currency input {
     border: 0;
-    
+    /* 此處注意 */
+    background: transparent;
+    font-size: 30px;
+    text-align: right;
+}
+
+.swap-rate-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.rate {
+    color: var(--primary-color);
+    font-size: 14px;
+    padding: 0 10px;
+}
+/* 注意 */
+select:focus,
+input:focus,
+button:focus {
+    outline: 0;
+}
+/* 注意 :在拉縮時畫面不會變形*/
+@media (max-width: 600px) {
+    .currency.input {
+        width: 200px;
+    }
 }
