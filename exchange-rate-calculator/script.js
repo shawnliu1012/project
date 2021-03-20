@@ -1,0 +1,5 @@
+function caclulate() {
+    fetch()
+}
+
+caclulate();
