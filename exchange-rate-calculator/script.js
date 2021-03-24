@@ -1,5 +1,5 @@
 function caclulate() {
-    fetch()
+   
 }
 
 caclulate();
