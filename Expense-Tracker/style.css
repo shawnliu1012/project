@@ -91,8 +91,14 @@ input[type='number'] {
     padding: 10px;
     width: 100%;
 }
+/* 元件狀態:https://ithelp.ithome.com.tw/articles/10185211 */
+.btn:focus,
+.delete-btn:focus {
+    outline: 0;
+}
 
 .btn {
+    cursor: pointer;
     background-color: #9c88ff;
     box-shadow: var(--box-shadow);
     color: #fff;
@@ -102,4 +108,54 @@ input[type='number'] {
     margin: 10px 0 30px;
     padding: 10px;
     width: 100%;
+}
+
+.list {
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 40px;
+}
+
+.list li {
+    background-color: #fff;
+    box-shadow: var(--box-shadow);
+    color: #333;
+    display: flex;
+    justify-content: space-between;
+    /* position注意 為了之後delete鍵設置 */
+    position: relative;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+.list li.plus {
+    border-right: 5px solid #2ecc71;
+}
+
+.list li.minus {
+    border-right: 5px solid #c0392b;
+}
+
+.delete-btn {
+    cursor: pointer;
+    background-color: #e74c3c;
+    border: 0;
+    color: #fff;
+    font-size: 20px;
+    line-height: 20px;
+    padding: 2px 5px;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    /* 注意 transform */
+    transform: translate(-100%, -50%);
+    /* 將delete btn隱藏 */
+    opacity: 0;
+    /* 轉場特效:https://ithelp.ithome.com.tw/articles/10200365 */
+    transition: opacity 0.3s ease;
+}
+
+/* opacity 0透明 1不透明 0.6半透明 */
+.list li:hover .delete-btn {
+    opacity: 1;
 }
