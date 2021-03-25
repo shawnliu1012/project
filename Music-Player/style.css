@@ -56,3 +56,39 @@ body {
   .music-container.play .img-container img {
     animation-play-state: running;
   }
+/* 讓封面圖片具有旋轉功能 */
+  @keyframes rotate {
+    from {
+      transform: rotate(0deg);
+    }
+  
+    to {
+      transform: rotate(360deg);
+    }
+  }
+/* 設定三個按鍵 */
+  .navigation {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+  }
+/* 案件細節 */
+  .action-btn {
+    background-color: #fff;
+    border: 0;
+    color: #dfdbdf;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 10px;
+    margin: 0 20px;
+  }
+
+  .action-btn.action-btn-big {
+    color: #cdc2d0;
+    font-size: 30px;
+  }
+/* 注意此處細節設定，稍後查詢一下 */
+  .action-btn:focus {
+    outline: 0;
+  }
