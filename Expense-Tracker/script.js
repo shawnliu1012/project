@@ -6,17 +6,23 @@ const form = document.getElementById('form')
 const text = document.getElementById('text')
 const amount = document.getElementById('amount')
 
-const dummyTransactions = [
-    {id: 1, text: 'Flower', amount: -20 },
-    {id: 2, text: 'Salary', amount: 300 },
-    {id: 3, text: 'Book', amount: -10 },
-    {id: 4, text: 'Camera', amount: 150 }
-];
+// const dummyTransactions = [
+//     {id: 1, text: 'Flower', amount: -20 },
+//     {id: 2, text: 'Salary', amount: 300 },
+//     {id: 3, text: 'Book', amount: -10 },
+//     {id: 4, text: 'Camera', amount: 150 }
+// ];
 
-let transactions = dummyTransactions;
+const localStorageTransactions = JSON.parse(localStorage.getItem
+    ('transactions'));
+// 從dummyTransactions改為: 目的為清零
+// let transactions = dummyTransactions;
+let transactions = 
+localStorage.getItem('transactions') !== null ?
+localStorageTransactions : [];
 
 // 下方設定完事件監聽至此處撰寫function
-// 設定下方花費或淨賺提交處
+// 3.設定下方花費或淨賺提交處
 // Add transaction
 function addTransaction(e) {
     e.preventDefault();
@@ -37,6 +43,8 @@ function addTransaction(e) {
         addTransactionDOM(transaction);
 
         updateValues();
+// 在設定下方Update local storage transactions Function後設置
+        updateLocalStorage();
 
         text.value = '';
         amount.value = '';
@@ -68,7 +76,7 @@ function addTransactionDOM(transaction) {
 // 注意
     list.appendChild(item);
 }
-// 設定總數值，淨賺及花費數值
+// 2.設定總數值，淨賺及花費數值
 // Upate the balance, income and expense
 function updateValues() {
     const amounts = transactions.map(transaction => transaction.amount);
@@ -94,9 +102,18 @@ function updateValues() {
 function removeTransaction(id) {
     transactions = transactions.filter(transaction => transaction.id
         !== id);
+// 在設定Update local storage transactions 後設置
+        updateLocalStorage();
 
         init();
 }
+// 4.設定本地存儲
+// Update local storage transactions
+function updateLocalStorage() {
+    localStorage.setItem('transactions', JSON.stringify(transactions))
+    ;
+}
+
 
 // 注意
 // Init app
