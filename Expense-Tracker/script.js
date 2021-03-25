@@ -25,7 +25,7 @@ function addTransactionDOM(transaction) {
     // 注意
     // Add class based on value
    item.classList.add(transaction.amount < 0 ? 'minus' : 'plus');
-   
+    // Math.abs 將負數轉為正數
     item.innerHTML = `
         ${transaction.text} <span>${sign}${Math.abs(
             transaction.amount
