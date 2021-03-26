@@ -31,8 +31,17 @@ function playSong() {
   
     audio.play();
   }
+// 設定完上方function後，接著設定pause，讓歌曲具有暫停功能
+  // Pause song
+function pauseSong() {
+    musicContainer.classList.remove('play');
+    playBtn.querySelector('i.fas').classList.add('fa-play');
+    playBtn.querySelector('i.fas').classList.remove('fa-pause');
+  
+    audio.pause();
+  }
 
-// 設定撥放鍵,因此要在上方設定function
+// 設定撥放鍵,因此要在上方設定play 與 pause function
   // Event listeners
 playBtn.addEventListener('click', () => {
     const isPlaying = musicContainer.classList.contains('play');
