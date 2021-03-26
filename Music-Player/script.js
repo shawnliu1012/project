@@ -72,8 +72,13 @@ function prevSong() {
   
     playSong();
   }
-
-  
+// 在本地端紀錄撥放時長，即可在撥放條上看到進度，，內容再注意
+  // Update progress bar
+function updateProgress(e) {
+    const { duration, currentTime } = e.srcElement;
+    const progressPercent = (currentTime / duration) * 100;
+    progress.style.width = `${progressPercent}%`;
+  }
 
 // 設定撥放鍵,因此要在上方設定play 與 pause function
   // Event listeners
