@@ -46,6 +46,34 @@ function pauseSong() {
     // 歌曲暫停以此為主
     audio.pause();
   }
+// change song設定完事件監聽後，撰寫function
+// Previous song
+function prevSong() {
+    songIndex--;
+//   注意此邏輯
+    if (songIndex < 0) {
+      songIndex = songs.length - 1;
+    }
+  
+    loadSong(songs[songIndex]);
+  
+    playSong();
+  }
+  
+  // Next song
+  function nextSong() {
+    songIndex++;
+  
+    if (songIndex > songs.length - 1) {
+      songIndex = 0;
+    }
+  
+    loadSong(songs[songIndex]);
+  
+    playSong();
+  }
+
+  
 
 // 設定撥放鍵,因此要在上方設定play 與 pause function
   // Event listeners
@@ -58,3 +86,10 @@ playBtn.addEventListener('click', () => {
       playSong();
     }
   });
+// 設定監聽，，至上方撰寫function
+  // Change song
+prevBtn.addEventListener('click', prevSong);
+nextBtn.addEventListener('click', nextSong);
+
+// Time/song update
+audio.addEventListener('timeupdate', updateProgress);
