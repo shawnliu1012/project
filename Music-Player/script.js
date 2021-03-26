@@ -14,6 +14,10 @@ const songs = ['hey', 'summer', 'ukulele'];
 // ukulele=2，如轉換為1，歌曲會因此跳到summer
 // Keep track of song
 let songIndex = 2;
+// 讀取歌名
+// Initially load song details into DOM
+loadSong(songs[songIndex]);
+
 // innertext再複習,const song->let songIndex->function loadSong
 // Update song details
 function loadSong(song) {
