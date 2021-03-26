@@ -25,10 +25,11 @@ function loadSong(song) {
 // Play song
 function playSong() {
     musicContainer.classList.add('play');
-    // 設定播放與暫停
+    // 設定播放與暫停圖案(下方function亦同)
     playBtn.querySelector('i.fas').classList.remove('fa-play');
     playBtn.querySelector('i.fas').classList.add('fa-pause');
   
+    // 歌曲播放以此為主
     audio.play();
   }
 // 設定完上方function後，接著設定pause，讓歌曲具有暫停功能
@@ -38,6 +39,7 @@ function pauseSong() {
     playBtn.querySelector('i.fas').classList.add('fa-play');
     playBtn.querySelector('i.fas').classList.remove('fa-pause');
   
+    // 歌曲暫停以此為主
     audio.pause();
   }
 
