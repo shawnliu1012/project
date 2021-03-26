@@ -37,6 +37,19 @@ body {
     position: relative;
     width: 110px;
   }
+/* 設置專輯封面中間的圓圈，製造出像CD的樣子 */
+/* content注意 */
+  .img-container::after {
+    content: '';
+    background-color: #fff;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    transform: translate(-50%, 50%);
+  }
 
   .img-container img {
     border-radius: 50%;
@@ -94,4 +107,48 @@ body {
 /* 將播放鍵點擊時產生的預設框線消除 */
   .action-btn:focus {
     outline: 0;
+  }
+
+  .music-info {
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 15px 15px 0 0;
+    position: absolute;
+    top: 0;
+    left: 20px;
+    /* 讓專輯標題於上方置中不被遮住，width and padding */
+    /* calc注意 */
+    /* 有點卡住，再思考，為何標題周圍的寬度需要另外設置，而下方需要另外設置，而下方padding也只是設置標題字的位置而已 */
+    width: calc(100% - 40px);
+    padding: 10px 10px 10px 150px;
+    opacity: 0;
+    transform: translateY(0%);
+    transition: transform 0.3s ease-in, opacity 0.3s ease-in;
+    z-index: 0;
+  }
+/* 在播放時顯現標題 */
+  .music-container.play .music-info {
+    opacity: 1;
+    transform: translateY(-100%);
+  }
+  /* 上方卡住的地方，為何是另外寫出來控制標題後方圖形外邊界大小 */
+  .music-info h4 {
+    margin: 0;
+  }
+/* 設置播放條 */
+  .progress-container {
+    background: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px 0;
+    height: 4px;
+    width: 100%;
+  }
+/* 設置撥放進度條 */
+  .progress {
+    background-color: #fe8daa;
+    border-radius: 5px;
+    height: 100%;
+    /* 調整下方數據可以設置進度條的進度 */
+    width: 0%;
+    transition: width 0.1s linear;
   }
