@@ -88,7 +88,10 @@ body {
     color: #cdc2d0;
     font-size: 30px;
   }
-/* 注意此處細節設定，稍後查詢一下 */
+/* css元件狀態，可整理https://wcc723.github.io/css/2016/12/06/css-status/ */
+/* 將原設定消除:https://archerworkshop.info/%E6%B6%88%E9%99%A4chrome%E7%80%8F%E8%A6%BD%E5%99%A8input%E5%85%83%E7%B4%A0%E7%9A%84%E8%97%8D%E8%89%B2%E9%82%8A%E6%A1%86/*/
+/* https://www.html.cn/qa/css3/13973.html */
+/* 將播放鍵點擊時產生的預設框線消除 */
   .action-btn:focus {
     outline: 0;
   }
