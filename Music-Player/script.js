@@ -116,3 +116,7 @@ audio.addEventListener('timeupdate', updateProgress);
 
 // Click on progress bar
 progressContainer.addEventListener('click', setProgress);
+
+// 最後一步，歌曲結束後原本不會跳至下首，設定此監聽，跳轉
+// Song ends
+audio.addEventListener('ended', nextSong);
