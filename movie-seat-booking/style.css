@@ -1,19 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
-
-*{
+* {
     box-sizing: border-box;
 }
 
 body {
-     background-color: #242333;
-     color: #fff;
-     display: flex;
-     flex-direction: column;
-     align-items: center;
-     justify-content: center;
-     height: 100vh;
-     font-family: 'Lato', sans-serif;
-     margin: 0;
+    background-color: #242333;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    font-family: 'Lato', sans-serif;
+    margin: 0;
 }
 
 .movie-container {
@@ -47,7 +46,9 @@ body {
     margin-bottom: 30px;
 }
 
+
 /* 原來的.seat並無文字撐開，所以無寬度高度，使用heigh所以無寬度高度，使用height、width、margin設定 */
+
 .seat {
     background: #444451;
     height: 12px;
@@ -65,23 +66,34 @@ body {
 .seat.occupied {
     background-color: #fff;
 }
+
+
 /* nth-​​of-type（）選擇器 ，這目的是讓其中一行座位產生間距*/
+
+
 /* https://ithelp.ithome.com.tw/articles/10227242 */
-.seat:nth-of-type(2){
+
+.seat:nth-of-type(2) {
     margin-right: 18px;
 }
 
-.seat:nth-last-of-type(2){
+.seat:nth-last-of-type(2) {
     margin-left: 18px;
 }
+
+
 /*hover選擇器: http://www.w3big.com/zh-TW/css/sel-hover.html */
+
 .seat:not(.occupied):hover {
     /* 更改圖標 */
     cursor: pointer;
     /* 座位圖形做放大 */
     transform: scale(1.2);
 }
+
+
 /* 不讓上面設定的變化在shwcase版發生 */
+
 .showcase .seat:not(.occupied):hover {
     cursor: default;
     transform: scale(1);
@@ -99,13 +111,16 @@ body {
     justify-content: space-between;
 }
 
-.showcase li{
+.showcase li {
     display: flex;
     align-items: center;
     justify-content: center;
     margin: 0 10px;
 }
+
+
 /* showcase 圖案與字之間的間隔(以字的左側去調整) */
+
 .showcase li small {
     margin-left: 2px;
 }
@@ -130,6 +145,6 @@ p.text {
     margin: 5px 0;
 }
 
-p.text  span{
+p.text span {
     color: #6feaf6;
 }
