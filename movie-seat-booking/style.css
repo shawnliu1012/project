@@ -20,41 +20,26 @@ body {
 }
 
 .movie-container select {
-    /* 背景 */
     background: #fff;
-    /* https://www.itread01.com/hkpypll.html */
-    border: 0;
-    /* 圓角 */
     border-radius: 5px;
-    /* 字體 */
     font-size: 14px;
-    /* 距離左側間隔 */
     margin-left: 10px;
-    /* 格子的長寬 */
     padding: 5px 15px 5px 15px;
-    /* https://developer.mozilla.org/zh-CN/docs/Web/CSS/appearance */
-    /* https://www.itread01.com/p/691277.html */
-    /* https://blog.wrinkle-design.com/article/date/2020/09/ */
     -moz-appearance: none;
     -webkit-appearance: none;
     appearance: none;
 }
 
 .container {
-    /* 三維變化 3D效果變化，但為何座位圖不變?待了解 */
     perspective: 1000px;
     margin-bottom: 30px;
 }
-
-
-/* 原來的.seat並無文字撐開，所以無寬度高度，使用heigh所以無寬度高度，使用height、width、margin設定 */
 
 .seat {
     background: #444451;
     height: 12px;
     width: 15px;
     margin: 3px;
-    /* 左右各圓角 */
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
 }
@@ -67,12 +52,6 @@ body {
     background-color: #fff;
 }
 
-
-/* nth-​​of-type（）選擇器 ，這目的是讓其中一行座位產生間距*/
-
-
-/* https://ithelp.ithome.com.tw/articles/10227242 */
-
 .seat:nth-of-type(2) {
     margin-right: 18px;
 }
@@ -81,18 +60,10 @@ body {
     margin-left: 18px;
 }
 
-
-/*hover選擇器: http://www.w3big.com/zh-TW/css/sel-hover.html */
-
 .seat:not(.occupied):hover {
-    /* 更改圖標 */
     cursor: pointer;
-    /* 座位圖形做放大 */
     transform: scale(1.2);
 }
-
-
-/* 不讓上面設定的變化在shwcase版發生 */
 
 .showcase .seat:not(.occupied):hover {
     cursor: default;
@@ -104,10 +75,8 @@ body {
     padding: 5px 10px;
     border-radius: 5px;
     color: #777;
-    /* 文字前的標記(這裡是將它去除標記) */
     list-style-type: none;
     display: flex;
-    /* https://developer.mozilla.org/zh-CN/docs/Web/CSS/justify-content */
     justify-content: space-between;
 }
 
@@ -118,15 +87,11 @@ body {
     margin: 0 10px;
 }
 
-
-/* showcase 圖案與字之間的間隔(以字的左側去調整) */
-
 .showcase li small {
     margin-left: 2px;
 }
 
 .row {
-    /* https://magicjackting.pixnet.net/blog/post/224485899 */
     display: flex;
 }
 
@@ -135,9 +100,7 @@ body {
     height: 70px;
     width: 100%;
     margin: 15px 0;
-    /* https://developer.mozilla.org/zh-CN/docs/Web/CSS/transform-function/rotateX() */
     transform: rotateX(-45deg);
-    /* https://www.wibibi.com/info.php?tid=267 */
     box-shadow: 0 3px 10px rgba(255, 255, 255, 0.7);
 }
 
