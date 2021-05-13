@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
-
 :root {
     --box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0.24);
 }
@@ -14,7 +13,6 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    /* min-height:注意; */
     min-height: 100vh;
     margin: 0;
     font-family: 'Lato', sans-serif;
@@ -32,14 +30,12 @@ h1 {
 
 h3 {
     border-bottom: 1px solid #bbb;
-    /* padding-bottom; */
     padding-bottom: 10px;
     margin: 40px 0 10px;
 }
 
 h4 {
     margin: 0;
-    /* uppercase */
     text-transform: uppercase;
 }
 
@@ -51,14 +47,13 @@ h4 {
     justify-content: space-between;
     margin: 20px 0;
 }
-/* > div */
-.inc-exp-container > div {
-    /* flex:1 子元素平分空間 注意 */
+
+.inc-exp-container>div {
     flex: 1;
     text-align: center;
 }
-/* > div:first-of-type*/
-.inc-exp-container > div:first-of-type {
+
+.inc-exp-container>div:first-of-type {
     border-right: 1px solid #dedede;
 }
 
@@ -75,13 +70,12 @@ h4 {
 .money.minus {
     color: #c0392b;
 }
-/* inline-block與margin */
+
 label {
     display: inline-block;
     margin: 10px 0;
 }
 
-/* 設置輸入框，但[]注意 */
 input[type='text'],
 input[type='number'] {
     border: 1px solid #dedede;
@@ -91,7 +85,7 @@ input[type='number'] {
     padding: 10px;
     width: 100%;
 }
-/* 元件狀態:https://ithelp.ithome.com.tw/articles/10185211 */
+
 .btn:focus,
 .delete-btn:focus {
     outline: 0;
@@ -122,7 +116,6 @@ input[type='number'] {
     color: #333;
     display: flex;
     justify-content: space-between;
-    /* position注意 為了之後delete鍵設置 */
     position: relative;
     padding: 10px;
     margin: 10px 0;
@@ -147,15 +140,11 @@ input[type='number'] {
     position: absolute;
     top: 50%;
     left: 0;
-    /* 注意 transform */
     transform: translate(-100%, -50%);
-    /* 將delete btn隱藏 */
     opacity: 0;
-    /* 轉場特效:https://ithelp.ithome.com.tw/articles/10200365 */
     transition: opacity 0.3s ease;
 }
 
-/* opacity 0透明 1不透明 0.6半透明 */
 .list li:hover .delete-btn {
     opacity: 1;
 }
