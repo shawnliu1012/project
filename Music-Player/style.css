@@ -4,7 +4,6 @@
 }
 
 body {
-    /* 漸層 deg為角度 */
     background-image: linear-gradient( 0deg, rgba(247, 247, 247, 1) 23.8%, rgba(252, 221, 221, 1) 92%);
     height: 100vh;
     display: flex;
@@ -19,7 +18,6 @@ body {
     background-color: #fff;
     border-radius: 15px;
     box-shadow: 0 20px 20px 0 rgba(252, 169, 169, 0.6);
-    /* 此處為設定後img-container較不會跑偏嚴重 */
     display: flex;
     padding: 20px 30px;
     position: relative;
@@ -34,9 +32,6 @@ body {
 
 
 /* 設置專輯封面中間的圓圈，製造出像CD的樣子 */
-
-
-/* content注意 */
 
 .img-container::after {
     content: '';
@@ -54,18 +49,13 @@ body {
     border-radius: 50%;
     object-fit: cover;
     height: 110px;
-    /* 將圖片設定於框格內 */
     width: inherit;
     position: absolute;
     bottom: 0;
     left: 0;
-    /* 注意 */
     animation: rotate 3s linear infinite;
     animation-play-state: paused;
 }
-
-
-/* 注意 */
 
 .music-container.play .img-container img {
     animation-play-state: running;
@@ -94,7 +84,7 @@ body {
 }
 
 
-/* 案件細節 */
+/* 按鍵細節 */
 
 .action-btn {
     background-color: #fff;
@@ -112,15 +102,6 @@ body {
 }
 
 
-/* css元件狀態，可整理https://wcc723.github.io/css/2016/12/06/css-status/ */
-
-
-/* 將原設定消除:https://archerworkshop.info/%E6%B6%88%E9%99%A4chrome%E7%80%8F%E8%A6%BD%E5%99%A8input%E5%85%83%E7%B4%A0%E7%9A%84%E8%97%8D%E8%89%B2%E9%82%8A%E6%A1%86/*/
-
-
-/* https://www.html.cn/qa/css3/13973.html */
-
-
 /* 將播放鍵點擊時產生的預設框線消除 */
 
 .action-btn:focus {
@@ -133,9 +114,6 @@ body {
     position: absolute;
     top: 0;
     left: 20px;
-    /* 讓專輯標題於上方置中不被遮住，width and padding */
-    /* calc注意 */
-    /* 有點卡住，再思考，為何標題周圍的寬度需要另外設置，而下方需要另外設置，而下方padding也只是設置標題字的位置而已 */
     width: calc(100% - 40px);
     padding: 10px 10px 10px 150px;
     opacity: 0;
@@ -145,15 +123,12 @@ body {
 }
 
 
-/* 在播放時顯現標題 */
+/* 在播放時顯現標題  */
 
 .music-container.play .music-info {
     opacity: 1;
     transform: translateY(-100%);
 }
-
-
-/* 上方卡住的地方，為何是另外寫出來控制標題後方圖形外邊界大小 */
 
 .music-info h4 {
     margin: 0;
@@ -178,7 +153,6 @@ body {
     background-color: #fe8daa;
     border-radius: 5px;
     height: 100%;
-    /* 調整下方數據可以設置進度條的進度 */
     width: 0%;
     transition: width 0.1s linear;
 }
