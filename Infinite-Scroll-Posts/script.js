@@ -40,7 +40,6 @@ function showLoading() {
     loading.classList.add('show');
 
     setTimeout(() => {
-        // 讓下方loading點點消失
         loading.classList.remove('show');
 
         setTimeout(() => {
@@ -58,7 +57,7 @@ function filterPosts(e) {
     posts.forEach(post => {
         const title = post.querySelector('.post-title').innerText.toUpperCase();
         const body = post.querySelector('.post-body').innerText.toUpperCase();
-        //   如果符合就顯示 沒有就無
+
         if (title.indexOf(term) > -1 || body.indexOf(term) > -1) {
             post.style.display = 'flex';
         } else {
