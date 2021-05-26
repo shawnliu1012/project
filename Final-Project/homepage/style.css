@@ -83,7 +83,8 @@
     top:45%;
 }
 
-/* 
+
 .btn-floating:hover {
-    cursor: pointer;
-} */
+    background-color: #00008B;
+    transform: scale(1.2);
+}
