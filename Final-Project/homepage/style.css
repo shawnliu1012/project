@@ -60,7 +60,7 @@
     background-color: #000;
     
     /* overflow: hidden; */
-    /* z-index: 1; */
+    /* z-index: -1; */
     /* padding: 0; */
     border-radius: 50%;
     cursor: pointer;
@@ -73,13 +73,13 @@
 #btn1 {
     position: absolute;
     left: 0;
-    top:
+    top: 140px;
 }
 
 #btn2 {
     position: absolute;
     right: 0;
-    top: 35%;
+    top:140px;
 }
 
 /* 
