@@ -49,11 +49,12 @@
     justify-content: space-between; */
     position: relative;
 }
+
 .myslides {
     margin: auto;
     width: 100%;
-    
 }
+
 .btn-floating {
     display: inline-block;
     text-align: center;
@@ -80,11 +81,45 @@
 #btn2 {
     position: absolute;
     right: 0;
-    top:45%;
+    top: 45%;
 }
-
 
 .btn-floating:hover {
     background-color: #00008B;
     transform: scale(1.2);
 }
+
+/* end of Slideshow */
+
+/* classification */
+
+.classification {
+    text-align: center;
+    position: relative;
+}
+
+.classification-word {
+    background-color: #fff;
+    padding: 0px 10px;
+    color: #696969;
+    /* 此處RWD有點問題 */
+    position: absolute;
+    top: -10px;
+    left: 45%;
+
+}
+
+.classification-choose-part {
+    padding: 30px 0px 20px;
+    border-top: 1px solid #696969;
+    border-bottom: 1px solid #696969;
+}
+
+.classification-choose {
+    color: #00008B;
+    text-decoration: none;
+    padding: 0 10px;
+}
+
+/* end of classifications */
+/* section-1 */
