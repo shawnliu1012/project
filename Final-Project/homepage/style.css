@@ -3,32 +3,36 @@
     padding: 0%;
 }
 
+h4 {
+    color: #696969;
+}
 /* navbar */
 
-.navbar {
+.navbar-part {
     background-color: #F5F5F5;
-    text-align: left;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
 }
 
-.navbar a {
+.navbar-part a {
     color: #000;
     text-decoration: none;
-    display: inline-block;
     padding: 6px 20px;
     font-size: 12px;
     background-color: #F5F5F5;
     transition: 0.5s;
+
 }
 
 .search-in-navbar {
     border-left: 1px solid #DCDCDC;
-    position: relative;
-    bottom: 14px;
 }
 
 .search-in-navbar:hover {
     color: #00008B;
     font-weight: bold;
+    text-decoration: none;
 }
 
 .navbar-logo img {
@@ -37,7 +41,7 @@
 
 .navbar-logo img:hover {
     opacity: 0.5;
-}
+} 
 
 /* end of navbar */
 
@@ -45,24 +49,20 @@
 
 .slideshow {
     margin: 20px;
-    /* display: flex;
-    justify-content: space-between; */
     position: relative;
 }
+
 .myslides {
     margin: auto;
     width: 100%;
-    
 }
+
 .btn-floating {
     display: inline-block;
     text-align: center;
     color: #fff;
     background-color: #000;
     opacity: 0.5;
-    /* overflow: hidden; */
-    /* z-index: -1; */
-    /* padding: 0; */
     border-radius: 50%;
     cursor: pointer;
     font-size: 24px;
@@ -80,10 +80,166 @@
 #btn2 {
     position: absolute;
     right: 0;
-    top:45%;
+    top: 45%;
 }
 
-/* 
 .btn-floating:hover {
+    background-color: #00008B;
+    transform: scale(1.2);
+}
+
+/* end of Slideshow */
+
+/* classification */
+
+.classification {
+    width: 50%;
+    margin: auto;
+    text-align: center;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.classification-word {
+    background-color: #fff;
+    font-weight: bolder;
+    padding: 0px 10px;
+    color: #696969;
+    position: absolute;
+    top: -10px;
+
+}
+
+.classification-choose-part {
+    padding: 30px 10px 20px;
+    border-top: 1px solid #696969;
+    border-bottom: 1px solid #696969;
+}
+
+.classification-choose {
+    color: #00008B;
+    text-decoration: none;
+    padding: 0 10px;
+}
+
+.classification-choose:hover{
+    font-weight: bold;
+}
+
+/* end of classifications */
+/* section-1 */
+.project {
+    width: 50%;
+    margin: auto;
+
+}
+
+.project-name {
+    margin: 30px 0px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.project-btn {
+    background-color: #fff;
+    color: #696969;
+    border: 1px solid #696969;
+    border-radius: 3px;
+    padding: 0px 10px;
     cursor: pointer;
-} */
+    box-shadow: 1px 1px 2px #000;
+}
+
+.project-btn:hover {
+    color: #00008b;
+    border: 1px solid #00008b;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.container-projects {
+    width: 30%;
+    margin: 0px 10px 10px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.container-projects a {
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+
+}
+
+.container-projects img {
+    width: 100%;
+    vertical-align: top;
+}
+
+.container-span {
+    display: block;
+    font-size: 12px;
+    color: #696969;
+}
+
+.container-projects p {
+    color: #696969;
+    font-size: 14px;
+}
+
+.container-project-footer {
+    border-top: 3px solid #1E90FF;
+    color: #696969;
+    display: flex;
+    justify-content: space-between;
+}
+/* 設定time money 使兩行對齊 */
+.time {
+    vertical-align: top;
+}
+
+.money {
+    vertical-align: top;
+}
+
+/* page btn */
+.project-page {
+    padding-top: 30px;
+    display:flex;
+    justify-content: center;
+}
+/* end of project */
+/* footer */
+footer {
+    background-color: #F5F5F5;
+}
+
+.footer-part {
+    width: 50%;
+    margin: auto;
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    padding: 20px 0px;
+}
+
+.footer-title {
+    margin-bottom: 20px;
+}
+
+.trademark {
+    margin-top:20px;
+    color: #696969;
+}
