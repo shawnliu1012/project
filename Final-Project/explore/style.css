@@ -1,0 +1,158 @@
+* {
+    margin: 0%;
+    padding: 0%;
+}
+
+h4 {
+    color: #696969;
+}
+/* navbar */
+
+.navbar-part {
+    background-color: #F5F5F5;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.navbar-part a {
+    color: #000;
+    text-decoration: none;
+    padding: 6px 20px;
+    font-size: 12px;
+    background-color: #F5F5F5;
+    transition: 0.5s;
+
+}
+
+.search-in-navbar {
+    border-left: 1px solid #DCDCDC;
+}
+
+.search-in-navbar:hover {
+    color: #00008B;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.navbar-logo img {
+    width: 60px;
+}
+
+.navbar-logo img:hover {
+    opacity: 0.5;
+} 
+
+/* end of navbar */
+/* container */
+.container {
+    width: 75%;
+    margin: auto;
+}
+.select-search {
+    margin: 20px 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.select {
+    display: flex;
+    align-items: center;
+}
+
+.dropdown {
+    border: 1px solid #696969;
+    border-radius: 5px;
+}
+
+.project {
+    margin: 20px 0px 20px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.container-projects {
+    width: 30%;
+    margin: 0px 10px 10px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.container-projects a {
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+
+}
+
+.container-projects img {
+    width: 100%;
+    vertical-align: top;
+    border-radius: 10px;
+}
+
+.container-span {
+    display: block;
+    font-size: 12px;
+    color: #696969;
+}
+
+.container-projects p {
+    color: #696969;
+    font-size: 14px;
+}
+
+.container-project-footer {
+    border-top: 2px solid #1E90FF;
+    color: #696969;
+    display: flex;
+    justify-content: space-between;
+}
+
+.time {
+    vertical-align: top;
+}
+
+.money {
+    vertical-align: top;
+}
+/* page btn */
+.project-page {
+    padding-top: 30px;
+    display:flex;
+    justify-content: center;
+}
+
+/* end of container */
+/* footer */
+footer {
+    background-color: #F5F5F5;
+}
+
+.footer-part {
+    width: 50%;
+    margin: auto;
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    padding: 20px 0px;
+}
+
+.footer-title {
+    margin-bottom: 20px;
+}
+
+.trademark {
+    margin-top:20px;
+    color: #696969;
+}
+/* end of footer */
