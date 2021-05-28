@@ -55,6 +55,7 @@ h4 {
 .myslides {
     margin: auto;
     width: 100%;
+    border-radius: 10px;
 }
 
 .btn-floating {
@@ -74,13 +75,13 @@ h4 {
 #btn1 {
     position: absolute;
     left: 0;
-    top: 45%;
+    top: 43%;
 }
 
 #btn2 {
     position: absolute;
     right: 0;
-    top: 45%;
+    top: 43%;
 }
 
 .btn-floating:hover {
@@ -93,7 +94,6 @@ h4 {
 /* classification */
 
 .classification {
-    width: 50%;
     margin: auto;
     text-align: center;
     position: relative;
@@ -112,6 +112,7 @@ h4 {
 }
 
 .classification-choose-part {
+    width: 75%;
     padding: 30px 10px 20px;
     border-top: 1px solid #696969;
     border-bottom: 1px solid #696969;
@@ -130,9 +131,8 @@ h4 {
 /* end of classifications */
 /* section-1 */
 .project {
-    width: 50%;
+    width: 75%;
     margin: auto;
-
 }
 
 .project-name {
@@ -180,6 +180,7 @@ h4 {
 .container-projects img {
     width: 100%;
     vertical-align: top;
+    border-radius: 10px;
 }
 
 .container-span {
@@ -194,7 +195,7 @@ h4 {
 }
 
 .container-project-footer {
-    border-top: 3px solid #1E90FF;
+    border-top: 2px solid #1E90FF;
     color: #696969;
     display: flex;
     justify-content: space-between;
@@ -243,3 +244,4 @@ footer {
     margin-top:20px;
     color: #696969;
 }
+/* end of footer */
