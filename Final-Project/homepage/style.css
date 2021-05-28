@@ -3,6 +3,11 @@
     padding: 0%;
 }
 
+h2 {
+    font-size: 22px;
+    font-weight: normal;
+    color: #696969;
+}
 /* navbar */
 
 .navbar {
@@ -94,18 +99,21 @@
 /* classification */
 
 .classification {
+    width: 50%;
+    margin: auto;
     text-align: center;
     position: relative;
 }
 
 .classification-word {
     background-color: #fff;
+    font-weight: bolder;
     padding: 0px 10px;
     color: #696969;
     /* 此處RWD有點問題 */
     position: absolute;
     top: -10px;
-    left: 45%;
+    left: 40%;
 
 }
 
@@ -121,5 +129,61 @@
     padding: 0 10px;
 }
 
+.classification-choose:hover{
+    font-weight: bold;
+}
+
 /* end of classifications */
 /* section-1 */
+.section-1 {
+    width: 50%;
+    margin: auto;
+
+}
+
+.section-1-name {
+    margin: 30px 0px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.section-1-btn {
+    background-color: #fff;
+    color: #696969;
+    border: 1px solid #696969;
+    border-radius: 3px;
+    padding: 3px 10px;
+    cursor: pointer;
+    box-shadow: 1px 1px 2px #000;
+}
+
+.section-1-btn:hover {
+    color: #00008b;
+    border: 1px solid #00008b;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.container-projects {
+    /* width: ; */
+    margin: 0px 10px 10px;
+}
+
+.container-projects a {
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+
+}
+
+.container-projects img {
+    width: 100%;
+    vertical-align: top;
+}
+
+.container-span {
+    display: block;
+}
