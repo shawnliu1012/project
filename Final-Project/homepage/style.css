@@ -3,9 +3,7 @@
     padding: 0%;
 }
 
-h2 {
-    font-size: 22px;
-    font-weight: normal;
+h4 {
     color: #696969;
 }
 /* navbar */
@@ -135,41 +133,46 @@ h2 {
 
 /* end of classifications */
 /* section-1 */
-.section-1 {
+.project {
     width: 50%;
     margin: auto;
 
 }
 
-.section-1-name {
+.project-name {
     margin: 30px 0px;
     display: flex;
     justify-content: space-between;
+    /* vertical-align: top; */
 }
 
-.section-1-btn {
+.project-btn {
     background-color: #fff;
     color: #696969;
     border: 1px solid #696969;
     border-radius: 3px;
-    padding: 3px 10px;
+    padding: 0px 10px;
     cursor: pointer;
     box-shadow: 1px 1px 2px #000;
 }
 
-.section-1-btn:hover {
+.project-btn:hover {
     color: #00008b;
     border: 1px solid #00008b;
 }
 
 .container {
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
 }
 
 .container-projects {
-    /* width: ; */
+    width: 30%;
     margin: 0px 10px 10px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
 }
 
 .container-projects a {
@@ -186,4 +189,33 @@ h2 {
 
 .container-span {
     display: block;
+    font-size: 12px;
+    color: #696969;
+}
+
+.container-projects p {
+    color: #696969;
+    font-size: 14px;
+}
+
+.container-project-footer {
+    border-top: 3px solid #1E90FF;
+    color: #696969;
+    display: flex;
+    justify-content: space-between;
+}
+/* 設定time money 使兩行對齊 */
+.time {
+    vertical-align: top;
+}
+
+.money {
+    vertical-align: top;
+}
+
+/* page btn */
+.project-page {
+    padding-top: 30px;
+    display:flex;
+    justify-content: center;
 }
