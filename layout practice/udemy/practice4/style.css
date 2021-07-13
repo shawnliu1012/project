@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css?family=Ubuntu');
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Ubuntu', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+}
+
+.bg {
+    background: url('https://images.unsplash.com/photo-1576161787924-01bb08dad4a4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2104&q=80') no-repeat center center/cover;
+    position: absolute;
+    /* 設定top&left是為了讓毛玻璃效果貼合邊界，不讓邊界有空白，再利用下方calc去做進一步計算 */
+    top: -30px;
+    left: -30px;
+    /* calc作為數值運算，包含加減乘除，此處設定+60px，是為了讓毛玻璃(blur)效果填滿頁面 */
+    width: calc(100vw + 60px);
+    height: calc(100vh + 60px);
+    z-index: -1;
+    /* 此處顯示0，但會利用JS讓其有毛玻璃的變化 */
+    filter: blur(0px);
+}
+
+.loading-text {
+    font-size: 50px;
+    color: #fff;
+}
