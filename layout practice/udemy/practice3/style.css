@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+* {
+    box-sizing: border-box;
+}
+
+body {
+    /* 自行更換了漸層 */
+    background-image: linear-gradient(45deg, #5fe7ff,#5674f7,#7158e2);
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+}
+
+.search {
+    position: relative;
+    height: 50px;
+}
+/* 自行添加圓角 */
+.input {
+    border-radius: 5px;
+}
+
+.search .input {
+    background-color: #fff;
+    border: 0;
+    font-size: 18px;
+    padding: 15px;
+    height: 50px;
+    width: 50px;
+    transition: width 0.3s ease;
+}
+
+.btn {
+    background-color: #fff;
+    /* 自行添加圓角 */
+    border-radius: 5px;
+    border: 0;
+    /* 自行添加陰影 */
+    box-shadow:1px 3px 3px #272626;
+    cursor: pointer;
+    font-size: 24px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 50px;
+    width: 50px;
+    transition: transform 0.3s ease;
+}
+
+.btn:focus, .input:focus {
+    outline: none;
+}
+
+.search.active .input {
+    width: 200px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    box-shadow:2px 3px 0px #272626;
+}
+/* 自行修改了 active伸展的間距 有點空隙看起來比較舒適 */
+.search.active .btn {
+    transform: translateX(200px);
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
